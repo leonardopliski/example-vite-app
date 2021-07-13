@@ -29,7 +29,7 @@ const ThemeSwitcher = () => {
         />
         <div className="toggle-switch"></div>
         <span className="toggle-label">
-          {isDarkThemeEnabled ? "Dark Theme" : "Light Theme"}
+          {isDarkThemeEnabled ? "Dark" : "Light"} Theme
         </span>
       </label>
     </div>
