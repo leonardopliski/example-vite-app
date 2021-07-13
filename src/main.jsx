@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import classNames from "classnames";
 import "./styles/index.scss";
+import { Canvas } from "@react-three/fiber";
+import { Box } from "./components/Box";
 
 const ThemeSwitcher = () => {
   const [isDarkThemeEnabled, setIsDarkThemeEnabled] = React.useState(false);
@@ -19,7 +21,6 @@ const ThemeSwitcher = () => {
   return (
     <div className={classes}>
       <h1>Vite Test App!</h1>
-
       <label className="toggle">
         <input
           className="toggle-checkbox"
@@ -32,6 +33,15 @@ const ThemeSwitcher = () => {
           {isDarkThemeEnabled ? "Dark" : "Light"} Theme
         </span>
       </label>
+
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[-4.2, 1.5, -0.5]} />
+        <Box position={[-2.2, 0, -5]} />
+        <Box position={[2.2, 0, -5]} />
+        <Box position={[4.2, 1.5, -0.5]} />
+      </Canvas>
     </div>
   );
 };
