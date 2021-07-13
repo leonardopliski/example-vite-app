@@ -1,0 +1,76 @@
+@forward 'design-tokens';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  padding: 20px;
+  &.light {
+    background-color: var(--body-light-normal-background-color);
+    color: var(--body-light-normal-text-color);
+  }
+  &.dark {
+    background-color: var(--body-dark-normal-background-color);
+    color: var(--body-dark-normal-text-color);
+  }
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  background: var(--toggle-switch-primary-normal-background-color);
+  .toggle-checkbox:checked + & {
+    background: var(--toggle-switch-primary-checked-background-color);
+    &:before {
+      left: 30px;
+    }
+  }
+  &:before,
+  &:after {
+    content: "";
+  }
+  &:before {
+    display: block;
+    background: var(--toggle-switch-circle-primary-active-background-color);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: var(--toggle-switch-circle-primary-hover-background-color);
+  }
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}

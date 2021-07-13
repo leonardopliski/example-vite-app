@@ -1,0 +1,16 @@
+:root {
+  --toggle-switch-primary-normal-background-color: hsl(0, 0%, 31%);
+  --toggle-switch-primary-checked-background-color: hsl(251, 87%, 55%);
+
+  --toggle-switch-circle-primary-normal-background-color: hsl(218, 36%, 96%);
+  --toggle-switch-circle-primary-active-background-color: hsl(218, 36%, 96%);
+  --toggle-switch-circle-primary-hover-background-color: hsl(218, 36%, 85%);
+
+  --body-light-normal-background-color: hsl(0, 0%, 91%);
+  --body-dark-normal-background-color: hsl(228, 67%, 8%);
+  --body-dark-normal-text-color: hsl(255, 73%, 96%);
+  --body-light-normal-text-color: hsl(240, 43%, 5%);
+
+  --font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto",
+    "Segoe UI", sans-serif;
+}
